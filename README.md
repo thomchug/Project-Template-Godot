@@ -1,2 +1,3 @@
-# Project-Template-Godot
-A default Godot project template for MSCH-C220
+#09-FPS
+
+Project to Design a First Person Shooter in Godot
