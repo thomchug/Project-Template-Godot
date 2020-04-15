@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tractorPolice.obj-b2db70535705c0231a562b717fc16148.mesh"
+
+[deps]
+
+files=[ "res://.import/tractorPolice.obj-b2db70535705c0231a562b717fc16148.mesh" ]
+
+source_file="res://Assets/carKit_v1.3/Models/OBJ format/tractorPolice.obj"
+dest_files=[ "res://.import/tractorPolice.obj-b2db70535705c0231a562b717fc16148.mesh", "res://.import/tractorPolice.obj-b2db70535705c0231a562b717fc16148.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

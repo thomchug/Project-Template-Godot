@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canoe.obj-56151a035337c1952443cfd4014dee85.mesh"
+
+[deps]
+
+files=[ "res://.import/canoe.obj-56151a035337c1952443cfd4014dee85.mesh" ]
+
+source_file="res://Assets/kenney_natureKit/Models/OBJ format/canoe.obj"
+dest_files=[ "res://.import/canoe.obj-56151a035337c1952443cfd4014dee85.mesh", "res://.import/canoe.obj-56151a035337c1952443cfd4014dee85.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cliffBrown_halfCornerInner.obj-aa357a1b3572f3776d546f73d8aa49ba.mesh"
+
+[deps]
+
+files=[ "res://.import/cliffBrown_halfCornerInner.obj-aa357a1b3572f3776d546f73d8aa49ba.mesh" ]
+
+source_file="res://Assets/kenney_natureKit/Models/OBJ format/cliffBrown_halfCornerInner.obj"
+dest_files=[ "res://.import/cliffBrown_halfCornerInner.obj-aa357a1b3572f3776d546f73d8aa49ba.mesh", "res://.import/cliffBrown_halfCornerInner.obj-aa357a1b3572f3776d546f73d8aa49ba.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

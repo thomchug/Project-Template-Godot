@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pillarLarge.obj-2851b693d1c117e85d99daea7f9aef3a.mesh"
+
+[deps]
+
+files=[ "res://.import/pillarLarge.obj-2851b693d1c117e85d99daea7f9aef3a.mesh" ]
+
+source_file="res://Assets/kenney_graveyardkit_3/Models/OBJ format/pillarLarge.obj"
+dest_files=[ "res://.import/pillarLarge.obj-2851b693d1c117e85d99daea7f9aef3a.mesh", "res://.import/pillarLarge.obj-2851b693d1c117e85d99daea7f9aef3a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

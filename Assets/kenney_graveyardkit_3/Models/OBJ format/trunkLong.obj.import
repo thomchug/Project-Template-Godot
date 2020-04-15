@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/trunkLong.obj-c8211dc647f37c5fa48aec1237faf4fa.mesh"
+
+[deps]
+
+files=[ "res://.import/trunkLong.obj-c8211dc647f37c5fa48aec1237faf4fa.mesh" ]
+
+source_file="res://Assets/kenney_graveyardkit_3/Models/OBJ format/trunkLong.obj"
+dest_files=[ "res://.import/trunkLong.obj-c8211dc647f37c5fa48aec1237faf4fa.mesh", "res://.import/trunkLong.obj-c8211dc647f37c5fa48aec1237faf4fa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,226 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/uziSilencer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/cliffGrey_top.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Tank.glb" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/cliffGrey_cornerTop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/tree_pine_tall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/Tank.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/EnemyBullets.gd" type="Script" id=9]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 200, 200 )
+
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -100.546, 0.546448, -100.546, -100.546, 0.546448, 100.546, 100.546, 0.546448, -100.546, 100.546, 0.546448, 100.546 )
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.5
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.4, 0.4, 0.4 )
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="CylinderShape" id=6]
+
+[node name="Game" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Ground Body" type="StaticBody" parent="."]
+
+[node name="Ground" type="MeshInstance" parent="Ground Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.151997, 0, -0.693752 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground Body"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.151997, 0, -0.693752 )
+shape = SubResource( 7 )
+
+[node name="Player" type="KinematicBody" parent="."]
+script = ExtResource( 1 )
+
+[node name="Body" type="CollisionShape" parent="Player"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.1, 0 )
+shape = SubResource( 3 )
+
+[node name="Feet" type="CollisionShape" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+shape = SubResource( 4 )
+
+[node name="Pivot" type="Spatial" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
+
+[node name="Camera" type="Camera" parent="Player/Pivot"]
+current = true
+
+[node name="uziSilencer" parent="Player/Pivot" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.5, -0.5, -2 )
+
+[node name="Muzzle" type="Position3D" parent="Player/Pivot"]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0.5, -0.17, -2.45 )
+
+[node name="Bullets" type="Spatial" parent="."]
+
+[node name="EnemyBullets" type="Spatial" parent="."]
+script = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="EnemyBullets"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="HUD" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="HUD"]
+margin_right = 252.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 0.196078 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="HUD"]
+margin_left = 256.0
+margin_right = 623.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 0.196078 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="HUD"]
+margin_right = 246.0
+margin_bottom = 34.0
+text = "Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objective" type="Label" parent="HUD"]
+margin_left = 252.0
+margin_top = -1.0
+margin_right = 625.0
+margin_bottom = 39.0
+text = "Kill Both Tanks to Win"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Terrain" type="Spatial" parent="."]
+
+[node name="cliffGrey_top" parent="Terrain" instance=ExtResource( 4 )]
+transform = Transform( -15, 0, -6.51683e-07, 0, 15, 0, 4.88762e-06, 0, -2, 75, 0, -100 )
+
+[node name="cliffGrey_top2" parent="Terrain" instance=ExtResource( 4 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 2, -75, 0, 100 )
+
+[node name="cliffGrey_top3" parent="Terrain" instance=ExtResource( 4 )]
+transform = Transform( 1.78873e-07, 0, -2, 0, 15, 0, 15, 0, 2.38498e-08, -100, 0, -75 )
+
+[node name="cliffGrey_top4" parent="Terrain" instance=ExtResource( 4 )]
+transform = Transform( -2.44381e-06, 0, 2, 0, 15, 0, -15, 0, -3.25841e-07, 100, 0, 75 )
+
+[node name="cliffGrey_cornerTop" parent="Terrain" instance=ExtResource( 6 )]
+transform = Transform( -2.44381e-06, 0, 15, 0, 15, 0, -15, 0, -2.44381e-06, 100, 0, 100 )
+
+[node name="cliffGrey_cornerTop2" parent="Terrain" instance=ExtResource( 6 )]
+transform = Transform( 1.78873e-07, 0, -15, 0, 15, 0, 15, 0, 1.78873e-07, -100, 0, -100 )
+
+[node name="cliffGrey_cornerTop3" parent="Terrain" instance=ExtResource( 6 )]
+transform = Transform( -15, 0, -4.88762e-06, 0, 15, 0, 4.88762e-06, 0, -15, 100, 0, -100 )
+
+[node name="cliffGrey_cornerTop4" parent="Terrain" instance=ExtResource( 6 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, -100, 0, 100 )
+
+[node name="tree_pine_tall" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 30 )
+
+[node name="tree_pine_tall2" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 40 )
+
+[node name="tree_pine_tall3" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -50 )
+
+[node name="tree_pine_tall4" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -60 )
+
+[node name="tree_pine_tall5" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 6 )
+
+[node name="tree_pine_tall6" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 6 )
+
+[node name="tree_pine_tall7" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -15 )
+
+[node name="tree_pine_tall8" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 15 )
+
+[node name="tree_pine_tall9" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -20 )
+
+[node name="tree_pine_tall10" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -35 )
+
+[node name="tree_pine_tall11" parent="Terrain" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, 55 )
+
+[node name="Enemies" type="Spatial" parent="."]
+
+[node name="Tank" type="KinematicBody" parent="Enemies"]
+script = ExtResource( 8 )
+
+[node name="Body" parent="Enemies/Tank" instance=ExtResource( 5 )]
+transform = Transform( -3.25841e-07, 0, 2, 0, 2, 0, -2, 0, -3.25841e-07, 60, 5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank"]
+transform = Transform( 3.5, 0, 0, 0, 4.2, 0, 0, 0, 3.5, 60, 4.4, 0 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Enemies/Tank"]
+transform = Transform( 1.3, 0, 0, 0, -4.39886e-07, -1.3, 0, 2.7, -2.11797e-07, 60, 5, -6 )
+shape = SubResource( 6 )
+
+[node name="Scanner" type="RayCast" parent="Enemies/Tank"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 5, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -30 )
+
+[node name="Timer" type="Timer" parent="Enemies/Tank"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Tank2" type="KinematicBody" parent="Enemies"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+script = ExtResource( 8 )
+
+[node name="Body" parent="Enemies/Tank2" instance=ExtResource( 5 )]
+transform = Transform( -3.25841e-07, 0, 2, 0, 2, 0, -2, 0, -3.25841e-07, 60, 5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Enemies/Tank2"]
+transform = Transform( 3.5, 0, 0, 0, 4.2, 0, 0, 0, 3.5, 60, 4.4, 0 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Enemies/Tank2"]
+transform = Transform( 1.3, 0, 0, 0, -4.39886e-07, -1.3, 0, 2.7, -2.11797e-07, 60, 5, -6 )
+shape = SubResource( 6 )
+
+[node name="Scanner" type="RayCast" parent="Enemies/Tank2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 5, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="Timer" type="Timer" parent="Enemies/Tank2"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="EnemyBullets/Timer" to="EnemyBullets" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Enemies/Tank/Timer" to="Enemies/Tank" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Enemies/Tank2/Timer" to="Enemies/Tank2" method="_on_Timer_timeout"]

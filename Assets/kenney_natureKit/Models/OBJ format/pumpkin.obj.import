@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pumpkin.obj-bab09f50b9f0cf4595cc67e91dc90932.mesh"
+
+[deps]
+
+files=[ "res://.import/pumpkin.obj-bab09f50b9f0cf4595cc67e91dc90932.mesh" ]
+
+source_file="res://Assets/kenney_natureKit/Models/OBJ format/pumpkin.obj"
+dest_files=[ "res://.import/pumpkin.obj-bab09f50b9f0cf4595cc67e91dc90932.mesh", "res://.import/pumpkin.obj-bab09f50b9f0cf4595cc67e91dc90932.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

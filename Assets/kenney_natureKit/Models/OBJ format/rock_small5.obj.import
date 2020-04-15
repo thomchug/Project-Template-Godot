@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/rock_small5.obj-234a4ed357ab4cd440c131317a4241ee.mesh"
+
+[deps]
+
+files=[ "res://.import/rock_small5.obj-234a4ed357ab4cd440c131317a4241ee.mesh" ]
+
+source_file="res://Assets/kenney_natureKit/Models/OBJ format/rock_small5.obj"
+dest_files=[ "res://.import/rock_small5.obj-234a4ed357ab4cd440c131317a4241ee.mesh", "res://.import/rock_small5.obj-234a4ed357ab4cd440c131317a4241ee.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

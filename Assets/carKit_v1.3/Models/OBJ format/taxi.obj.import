@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/taxi.obj-bc12c75ac7dc5b61fc0a77a6969e0e33.mesh"
+
+[deps]
+
+files=[ "res://.import/taxi.obj-bc12c75ac7dc5b61fc0a77a6969e0e33.mesh" ]
+
+source_file="res://Assets/carKit_v1.3/Models/OBJ format/taxi.obj"
+dest_files=[ "res://.import/taxi.obj-bc12c75ac7dc5b61fc0a77a6969e0e33.mesh", "res://.import/taxi.obj-bc12c75ac7dc5b61fc0a77a6969e0e33.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

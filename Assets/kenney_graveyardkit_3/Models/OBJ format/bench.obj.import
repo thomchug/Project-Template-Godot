@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bench.obj-909fb52b2ae586b547c312dc0aaa80fa.mesh"
+
+[deps]
+
+files=[ "res://.import/bench.obj-909fb52b2ae586b547c312dc0aaa80fa.mesh" ]
+
+source_file="res://Assets/kenney_graveyardkit_3/Models/OBJ format/bench.obj"
+dest_files=[ "res://.import/bench.obj-909fb52b2ae586b547c312dc0aaa80fa.mesh", "res://.import/bench.obj-909fb52b2ae586b547c312dc0aaa80fa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

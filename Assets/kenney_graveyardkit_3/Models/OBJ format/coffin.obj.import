@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/coffin.obj-4d760b6adad33ae6908bcee537566892.mesh"
+
+[deps]
+
+files=[ "res://.import/coffin.obj-4d760b6adad33ae6908bcee537566892.mesh" ]
+
+source_file="res://Assets/kenney_graveyardkit_3/Models/OBJ format/coffin.obj"
+dest_files=[ "res://.import/coffin.obj-4d760b6adad33ae6908bcee537566892.mesh", "res://.import/coffin.obj-4d760b6adad33ae6908bcee537566892.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

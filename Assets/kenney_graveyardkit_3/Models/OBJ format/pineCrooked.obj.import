@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pineCrooked.obj-2c482d10c6c258c72b60ab1aa1b1f1d2.mesh"
+
+[deps]
+
+files=[ "res://.import/pineCrooked.obj-2c482d10c6c258c72b60ab1aa1b1f1d2.mesh" ]
+
+source_file="res://Assets/kenney_graveyardkit_3/Models/OBJ format/pineCrooked.obj"
+dest_files=[ "res://.import/pineCrooked.obj-2c482d10c6c258c72b60ab1aa1b1f1d2.mesh", "res://.import/pineCrooked.obj-2c482d10c6c258c72b60ab1aa1b1f1d2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
